@@ -1,12 +1,22 @@
 using System;
-using GUtils.Di.Builder;
-using GUtils.Di.Container;
+using GUtilsUnity.Di.Builder;
+using GUtilsUnity.Di.Container;
 using UnityEngine.UI;
 
 namespace GUtilsUnity.Extensions
 {
     public static class ButtonDiExtensions
     {
+        [System.Obsolete("This method is obsolete. Use LinkButtonClick instead.")]
+        public static IDiContainerBuilder LinkButton(
+            this IDiContainerBuilder builder,
+            Button button,
+            Action action
+        )
+        {
+            return builder.LinkButtonClick(button, action);
+        }
+
         public static IDiContainerBuilder LinkButtonClick(
             this IDiContainerBuilder builder,
             Button button,
@@ -25,7 +35,17 @@ namespace GUtilsUnity.Extensions
 
             return builder;
         }
-        
+
+        [System.Obsolete("This method is obsolete. Use LinkButtonClick instead.")]
+        public static IDiContainerBuilder LinkButton(
+            this IDiContainerBuilder builder,
+            Button button,
+            Func<IDiResolveContainer, Action> func
+        )
+        {
+            return builder.LinkButtonClick(button, func);
+        }
+
         public static IDiContainerBuilder LinkButtonClick(
             this IDiContainerBuilder builder,
             Button button,
@@ -48,7 +68,17 @@ namespace GUtilsUnity.Extensions
 
             return builder;
         }
-        
+
+        [System.Obsolete("This method is obsolete. Use LinkButtonClick instead.")]
+        public static IDiBindingActionBuilder<T> LinkButton<T>(
+            this IDiBindingActionBuilder<T> actionBuilder,
+            Button button,
+            Func<T, Action> func
+        )
+        {
+            return actionBuilder.LinkButtonClick(button, func);
+        }
+
         public static IDiBindingActionBuilder<T> LinkButtonClick<T>(
             this IDiBindingActionBuilder<T> actionBuilder,
             Button button,
@@ -73,7 +103,17 @@ namespace GUtilsUnity.Extensions
 
             return actionBuilder;
         }
-        
+
+        [System.Obsolete("This method is obsolete. Use LinkButtonClickOnce instead.")]
+        public static IDiBindingActionBuilder<T> LinkButtonOnce<T>(
+            this IDiBindingActionBuilder<T> actionBuilder,
+            Button button,
+            Func<T, Action> func
+        )
+        {
+            return actionBuilder.LinkButtonClickOnce(button, func);
+        }
+
         public static IDiBindingActionBuilder<T> LinkButtonClickOnce<T>(
             this IDiBindingActionBuilder<T> actionBuilder,
             Button button,
