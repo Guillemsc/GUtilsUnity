@@ -1,8 +1,8 @@
 using System.Threading;
 using System.Threading.Tasks;
+using GUtils.Visibility.Visibles;
 using GUtilsUnity.TweenPlayers.Clips.Base;
 using GUtilsUnity.TweenPlayers.Players;
-using GUtilsUnity.Visibility.Visibles;
 
 namespace Popcore.GameKit.Level.FailGoalPopup.UseCases
 {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using GUtilsUnity.Enums.Utils;
-using GUtilsUnity.Extensions;
+using GUtils.Enums.Utils;
+using GUtils.Extensions;
 using UnityEditor;
 using UnityEngine;
 

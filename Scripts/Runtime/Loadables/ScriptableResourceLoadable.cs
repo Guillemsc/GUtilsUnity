@@ -1,5 +1,6 @@
-using GUtilsUnity.Disposing.Disposables;
-using GUtilsUnity.Extensions;
+using GUtils.Disposing.Disposables;
+using GUtils.Extensions;
+using GUtils.Loadables;
 using UnityEngine;
 
 namespace GUtilsUnity.Loadables

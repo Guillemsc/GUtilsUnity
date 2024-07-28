@@ -1,8 +1,9 @@
 using System;
-using GUtilsUnity.Extensions;
+using GUtils.Extensions;
 using GUtilsUnity.Serialization.SerializableTypes;
 using TMPro;
 using UnityEngine;
+using TimeSpanExtensions = GUtilsUnity.Extensions.TimeSpanExtensions;
 
 namespace GUtilsUnity.Ui
 {

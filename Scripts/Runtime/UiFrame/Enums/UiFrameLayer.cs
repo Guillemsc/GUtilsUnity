@@ -1,4 +1,4 @@
-using GUtilsUnity.Enums.Utils;
+using GUtils.Enums.Utils;
 
 namespace GUtilsUnity.UiFrame.Layers
 {

@@ -89,7 +89,7 @@ namespace GUtilsUnity.Extensions
             float viewportDisplacement = scrollRect.viewport.rect.height * normalizedViewportPosition;
             float desiredPosition = localContentPosition.y - viewportDisplacement;
 
-            float factor = MathExtensions.GetNormalizedFactor(desiredPosition, contentMin, scrollableMax);
+            float factor = GUtils.Extensions.MathExtensions.GetNormalizedFactor(desiredPosition, contentMin, scrollableMax);
 
             return factor;
         }
@@ -143,7 +143,7 @@ namespace GUtilsUnity.Extensions
             float viewportDisplacement = scrollRect.viewport.rect.width * normalizedViewportPosition;
             float desiredPosition = localContentPosition.x - viewportDisplacement;
 
-            float factor = MathExtensions.GetNormalizedFactor(desiredPosition, contentMin, scrollableMax);
+            float factor = GUtils.Extensions.MathExtensions.GetNormalizedFactor(desiredPosition, contentMin, scrollableMax);
 
             return factor;
         }

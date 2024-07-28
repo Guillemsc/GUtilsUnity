@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System;
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Container;
+using GUtils.Di.Builder;
+using GUtils.Di.Container;
 using GUtilsUnity.Di.Data;
 
 namespace GUtilsUnity.Di

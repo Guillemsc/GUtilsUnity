@@ -1,5 +1,6 @@
 using System;
-using GUtilsUnity.Tick.Tickables;
+using GUtils.Tick.Tickables;
+using GUtils.Time.TimeContexts;
 
 namespace GUtilsUnity.Time.TimeContexts
 {
@@ -12,6 +13,7 @@ namespace GUtilsUnity.Time.TimeContexts
         public TimeSpan Time { get; private set; }
         public float TimeScale { get; set; }
         public float DeltaTime { get; private set; }
+        public event Action OnTimeScaleChanged;
 
         public void Tick()
         {

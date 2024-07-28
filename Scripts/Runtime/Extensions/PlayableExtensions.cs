@@ -9,7 +9,7 @@ namespace GUtilsUnity.Extensions
         /// </summary>
         public static float GetNormalizedProgress(this Playable playable)
         {
-            return MathExtensions.Divide((float)playable.GetTime(), (float)playable.GetDuration());
+            return GUtils.Extensions.MathExtensions.Divide((float)playable.GetTime(), (float)playable.GetDuration());
         }
     }
 }

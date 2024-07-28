@@ -136,7 +136,7 @@ namespace GUtilsUnity.Extensions
             Transform cameraTransform = camera.transform;
 
             // Calculate the aspect ratio of the camera.
-            float aspectRatio = MathExtensions.Divide(camera.pixelWidth, camera.pixelHeight);
+            float aspectRatio = GUtils.Extensions.MathExtensions.Divide(camera.pixelWidth, camera.pixelHeight);
 
             // Calculate the half screen size in world units.
             Vector2 halfScreenSize = new Vector2(

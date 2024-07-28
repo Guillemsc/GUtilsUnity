@@ -1,5 +1,5 @@
-﻿using GUtilsUnity.Repositories;
-using GUtilsUnity.Sequencing.Instructions;
+﻿using GUtils.Tasks.Sequencing.Instructions;
+using GUtilsUnity.Repositories;
 using GUtilsUnity.UiStack.Entries;
 using GUtilsUnity.Extensions;
 

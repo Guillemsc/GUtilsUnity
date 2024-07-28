@@ -1,5 +1,5 @@
+using GUtils.Optionals;
 using GUtilsUnity.Collections;
-using GUtilsUnity.Optionals;
 
 namespace GUtilsUnity.Extensions
 {

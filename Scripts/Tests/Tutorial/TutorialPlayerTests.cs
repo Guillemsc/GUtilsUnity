@@ -8,6 +8,7 @@ using NUnit.Framework;
 using GUtilsUnity.Extensions;
 using UnityEngine.TestTools;
 using GUtils.Extensions;
+using GUtils.Time.Timers;
 
 namespace GUtilsUnity.Tutorial
 {

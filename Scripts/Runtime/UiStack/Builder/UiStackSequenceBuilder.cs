@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using GUtils.Extensions;
+using GUtils.Tasks.Sequencing.Instructions;
+using GUtils.Tasks.Sequencing.Sequencer;
 using GUtilsUnity.Repositories;
-using GUtilsUnity.Sequencing.Instructions;
-using GUtilsUnity.Sequencing.Sequencer;
 using GUtilsUnity.UiFrame.Services;
 using GUtilsUnity.UiStack.Entries;
 using GUtilsUnity.UiStack.Instructions;
 using GUtilsUnity.UiStack.UseCases;
-using GUtilsUnity.Extensions;
 
 namespace GUtilsUnity.UiStack.Builder
 {
@@ -24,7 +23,7 @@ namespace GUtilsUnity.UiStack.Builder
         readonly ISingleRepository<object> _currentContextRepository;
         readonly IListRepository<object> _currentPopupsRepository;
         readonly List<object> _viewStack;
-        readonly ISequencer _sequencer;
+        readonly ITaskSequencer _sequencer;
         readonly ShowUseCase _showUseCase;
         readonly HideUseCase _hideUseCase;
 
@@ -34,7 +33,7 @@ namespace GUtilsUnity.UiStack.Builder
             ISingleRepository<object> currentContextRepository,
             IListRepository<object> currentPopupsRepository,
             List<object> viewStack,
-            ISequencer sequencer,
+            ITaskSequencer sequencer,
             ShowUseCase showUseCase,
             HideUseCase hideUseCase
             )
@@ -202,7 +201,7 @@ namespace GUtilsUnity.UiStack.Builder
 
             cancellationToken.Register(_sequencer.Kill);
 
-            return _sequencer.WaitCompletition();
+            return _sequencer.AwaitCompletition(cancellationToken);
         }
 
         public void Execute()

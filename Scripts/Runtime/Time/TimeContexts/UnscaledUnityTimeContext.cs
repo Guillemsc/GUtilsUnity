@@ -1,4 +1,5 @@
 using System;
+using GUtils.Time.TimeContexts;
 
 namespace GUtilsUnity.Time.TimeContexts
 {
@@ -22,5 +23,6 @@ namespace GUtilsUnity.Time.TimeContexts
             set {}
         }
         public float DeltaTime => UnityEngine.Time.unscaledDeltaTime;
+        public event Action OnTimeScaleChanged;
     }
 }

@@ -1,18 +1,18 @@
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.DiscriminatedUnions;
-using GUtilsUnity.Optionals;
-using GUtilsUnity.Persistence.StorageMethods;
-using GUtilsUnity.Types;
+using GUtils.DiscriminatedUnions;
+using GUtils.Optionals;
+using GUtils.Persistence.StorageMethods;
+using GUtils.Types;
 using UnityEngine;
 
 namespace GUtilsUnity.Persistence.Methods
 {
     /// <inheritdoc />
     /// <summary>
-    /// Implementation of <see cref="IStorageMethod"/> where data gets saved as <see cref="PlayerPrefs"/>.
+    /// Implementation of <see cref="IPersistenceStorageMethod"/> where data gets saved as <see cref="PlayerPrefs"/>.
     /// </summary>
-    public sealed class PlayerPrefsStorageMethod : IStorageMethod
+    public sealed class PlayerPrefsStorageMethod : IPersistenceStorageMethod
     {
         public static readonly PlayerPrefsStorageMethod Instance = new();
 
@@ -37,7 +37,7 @@ namespace GUtilsUnity.Persistence.Methods
             {
                 OneOf<string, ErrorMessage> oneOfError = new ErrorMessage(
                     $"Key {localPath} could not be found on PlayerPrefs"
-                    );
+                );
                 return Task.FromResult(oneOfError);
             }
 

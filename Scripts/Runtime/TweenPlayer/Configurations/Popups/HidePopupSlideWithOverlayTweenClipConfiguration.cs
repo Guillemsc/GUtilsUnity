@@ -1,4 +1,4 @@
-using GUtilsUnity.Directions;
+using GUtils.Directions;
 using GUtilsUnity.Tweening.Configuration;
 using UnityEngine;
 

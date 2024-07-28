@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using GUtils.Optionals;
 using GUtilsUnity.Extensions;
-using GUtilsUnity.Optionals;
 using GUtilsUnity.SceneManagement.Collections;
 using GUtilsUnity.SceneManagement.Reference;
 using UnityEditor.SceneManagement;
@@ -177,7 +177,7 @@ namespace GUtilsUnity.SceneManagement.Loader
 
                 if (!loadedScene.IsValid())
                 {
-                    UnityEngine.Debug.LogError($"There was an error loading scene: {scenePath}. Loaded scene is not valid at {nameof(RuntimeSceneLoader)}");
+                    UnityEngine.Debug.LogError($"There was an error loading scene: {scenePath}. Loaded scene is not valid at {nameof(RuntimeSceneExtensions)}");
                 }
 
                 taskCompletionSource.SetResult(Optional<Scene>.Some(loadedScene));
@@ -198,7 +198,7 @@ namespace GUtilsUnity.SceneManagement.Loader
         /// The result of the task is a boolean indicating whether the scene was successfully unloaded.</returns>
         public static Task<bool> UnloadFromName(string sceneName)
         {
-            return RuntimeSceneLoader.UnloadFromName(sceneName);
+            return RuntimeSceneExtensions.UnloadFromName(sceneName);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace GUtilsUnity.SceneManagement.Loader
         /// is a boolean indicating whether the scene was successfully unloaded.</returns>
         public static Task<bool> UnloadFromPath(string scenePath)
         {
-            return RuntimeSceneLoader.UnloadFromPath(scenePath);
+            return RuntimeSceneExtensions.UnloadFromPath(scenePath);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace GUtilsUnity.SceneManagement.Loader
         /// scene in the collection was successfully unloaded.</returns>
         public static Task<List<bool>> Unload(ISceneCollection sceneCollection)
         {
-            return RuntimeSceneLoader.Unload(sceneCollection);
+            return RuntimeSceneExtensions.Unload(sceneCollection);
         }
     }
 }

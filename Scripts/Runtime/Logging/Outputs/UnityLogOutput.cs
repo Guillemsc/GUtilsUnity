@@ -1,4 +1,5 @@
-using GUtilsUnity.Logging.Enums;
+using GUtils.Logging.Enums;
+using GUtils.Logging.Outputs;
 
 namespace GUtilsUnity.Logging.Outputs
 {

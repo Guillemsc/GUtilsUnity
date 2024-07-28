@@ -12,12 +12,6 @@ namespace GUtilsUnity.FpsDebug.MonoBehaviours
 
         void Update()
         {
-            // Just in case this leaks into production.
-            if (!PopcoreCoreApplication.IsDebug)
-            {
-                return;
-            }
-
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = MaxFps;
         }

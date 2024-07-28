@@ -1,4 +1,5 @@
 using System;
+using GUtils.Time.Timers;
 using GUtilsUnity.Time.Timers;
 
 namespace GUtilsUnity.Predicates

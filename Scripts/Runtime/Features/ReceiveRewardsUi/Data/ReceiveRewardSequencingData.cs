@@ -1,9 +1,9 @@
-using GUtilsUnity.Sequencing.Sequencer;
+using GUtils.Tasks.Sequencing.Sequencer;
 
 namespace GUtilsUnity.Features.ReceiveRewardsUi.Data
 {
     public sealed class ReceiveRewardSequencingData
     {
-        public ISequencer MainSequencer { get; } = new Sequencer();
+        public ITaskSequencer MainSequencer { get; } = new TaskSequencer();
     }
 }

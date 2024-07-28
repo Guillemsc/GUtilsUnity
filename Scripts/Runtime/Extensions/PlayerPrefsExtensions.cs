@@ -1,4 +1,5 @@
 using System;
+using GUtils.Extensions;
 using UnityEngine;
 
 //FUTURE MAINTAINER: TAKE CARE WHEN UPDATING THIS. MAKE IT RETROCOMPATIBLE OR NOTIFY EVERYONE.

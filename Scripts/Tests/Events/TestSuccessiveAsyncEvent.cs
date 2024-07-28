@@ -1,7 +1,7 @@
-using System;
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.Tasks.CompletionSources;
+using GUtils.Events;
+using GUtils.Tasks.CompletionSources;
 using NUnit.Framework;
 
 namespace GUtilsUnity.Events.Test

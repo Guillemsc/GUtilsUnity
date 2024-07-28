@@ -32,7 +32,7 @@ namespace GUtilsUnity.Extensions
         {
             float distance = (a - b).sqrMagnitude;
 
-            return MathExtensions.IsEpsilonEqualsZero(distance);
+            return  GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero(distance);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace GUtilsUnity.Extensions
         /// <returns><c>true</c> if the magnitude of the Vector2 object is approximately zero; otherwise, <c>false</c>.</returns>
         public static bool IsMagnitudeEpsilonEqualsZero(Vector2 a)
         {
-            return MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
+            return GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
         }
 
         public static Vector2 MinComponents(this IEnumerable<Vector2> vectors)

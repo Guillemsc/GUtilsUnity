@@ -1,5 +1,5 @@
 using System;
-using GUtilsUnity.Di.Builder;
+using GUtils.Di.Builder;
 using GUtilsUnity.Pointer.Callbacks;
 using UnityEngine.EventSystems;
 

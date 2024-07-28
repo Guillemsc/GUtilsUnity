@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using GUtils.Extensions;
 using NUnit.Framework;
 
 namespace GUtilsUnity.Extensions.Test

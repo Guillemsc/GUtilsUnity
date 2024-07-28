@@ -1,6 +1,6 @@
 #nullable enable
 
-using GUtilsUnity.Optionals;
+using GUtils.Optionals;
 using NUnit.Framework;
 
 namespace GUtilsUnity.Extensions.Test

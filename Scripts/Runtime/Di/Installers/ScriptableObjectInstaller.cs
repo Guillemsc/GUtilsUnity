@@ -1,4 +1,5 @@
-using GUtilsUnity.Di.Builder;
+using GUtils.Di.Builder;
+using GUtils.Di.Installers;
 
 namespace GUtilsUnity.Di.Installers
 {

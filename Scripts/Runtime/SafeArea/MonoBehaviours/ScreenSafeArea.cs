@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GUtils.Extensions;
 using GUtilsUnity.Attributes.Self;
 using GUtilsUnity.Extensions;
 using GUtilsUnity.SafeArea.Cache;
@@ -192,11 +193,11 @@ namespace GUtilsUnity.SafeArea.MonoBehaviours
 
             _lastSafeArea = safeAreaRect;
 
-            float anchorMinX = _leftEnabled ? MathExtensions.Divide(safeAreaRect.x, Screen.width) : _targetRectTransform.anchorMin.x;
-            float anchorMinY = _downEnabled ? MathExtensions.Divide(safeAreaRect.y, Screen.height) : _targetRectTransform.anchorMin.y;
+            float anchorMinX = _leftEnabled ? GUtils.Extensions.MathExtensions.Divide(safeAreaRect.x, Screen.width) : _targetRectTransform.anchorMin.x;
+            float anchorMinY = _downEnabled ? GUtils.Extensions.MathExtensions.Divide(safeAreaRect.y, Screen.height) : _targetRectTransform.anchorMin.y;
 
-            float anchorMaxX = _rightEnabled ? MathExtensions.Divide(safeAreaRect.width, Screen.width) : _targetRectTransform.anchorMax.x;
-            float anchorMaxY = _upEnabled ? MathExtensions.Divide(safeAreaRect.height, Screen.height) : _targetRectTransform.anchorMax.y;
+            float anchorMaxX = _rightEnabled ? GUtils.Extensions.MathExtensions.Divide(safeAreaRect.width, Screen.width) : _targetRectTransform.anchorMax.x;
+            float anchorMaxY = _upEnabled ? GUtils.Extensions.MathExtensions.Divide(safeAreaRect.height, Screen.height) : _targetRectTransform.anchorMax.y;
 
             Vector2 anchorMin = new Vector2(anchorMinX, anchorMinY);
             Vector2 anchorMax = new Vector2(anchorMaxX, anchorMaxY);

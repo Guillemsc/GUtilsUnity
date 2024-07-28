@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.Optionals;
-using GUtilsUnity.Types;
+using GUtils.Optionals;
+using GUtils.Types;
 using UnityEngine.Video;
 
 namespace GUtilsUnity.Extensions

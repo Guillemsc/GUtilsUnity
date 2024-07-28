@@ -1,6 +1,5 @@
 using System;
-using System.Runtime.CompilerServices;
-using GUtilsUnity.Di.Builder;
+using GUtils.Di.Builder;
 using GUtilsUnity.Pointer.Callbacks;
 
 namespace GUtilsUnity.Pointer.Extensions

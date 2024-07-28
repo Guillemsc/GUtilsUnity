@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using GUtilsUnity.Directions;
+using GUtils.Directions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools.Utils;

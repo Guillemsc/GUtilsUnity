@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using GUtils.Extensions;
 using UnityEditor;
 using UnityEditor.Search;
 using UnityEngine;
@@ -15,12 +16,6 @@ namespace GUtilsUnity.Extensions
     /// </summary>
     public static class AssetDatabaseExtensions
     {
-        [Obsolete("This method is obsolete. Use FindAllPrefabsWithComponentTypeAsync instead")]
-        public static Task<List<T>> FindGameObjectsByComponentTypeAsync<T>() where T : UnityEngine.Object
-        {
-            return FindAllPrefabsWithComponentTypeAsync<T>();
-        }
-
         /// <summary>
         /// Using the Unity's <see cref="SearchService"/> does a quick search of all game objects that contain a certain component type.
         /// This may trigger a refresh on the <see cref="SearchService"/>, which can take some time for the first instance.

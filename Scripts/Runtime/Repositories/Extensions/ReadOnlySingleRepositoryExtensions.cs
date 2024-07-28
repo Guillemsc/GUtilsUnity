@@ -1,4 +1,4 @@
-using GUtilsUnity.Optionals;
+using GUtils.Optionals;
 
 namespace GUtilsUnity.Repositories.Extensions
 {

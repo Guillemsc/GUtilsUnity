@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.Tasks.CompletionSources;
+using GUtils.Extensions;
+using GUtils.Tasks.CompletionSources;
 using UnityEngine.UI;
 
 namespace GUtilsUnity.Extensions

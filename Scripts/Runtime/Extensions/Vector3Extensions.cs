@@ -38,7 +38,7 @@ namespace GUtilsUnity.Extensions
         /// <param name="b">The second <see cref="Vector3"/> object.</param>
         /// <returns><c>true</c> if the vectors are approximately equal; otherwise, <c>false</c>.</returns>
         public static bool AreEpsilonEquals(Vector3 a, Vector3 b)
-            => MathExtensions.IsEpsilonEqualsZero((a - b).sqrMagnitude);
+            => GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero((a - b).sqrMagnitude);
 
         /// <summary>
         /// Checks if the magnitude of a <see cref="Vector3"/> is approximately equal
@@ -47,7 +47,7 @@ namespace GUtilsUnity.Extensions
         /// <param name="a">The <see cref="Vector3"/> object.</param>
         /// <returns><c>true</c> if the vector is approximately equal to zero; otherwise, <c>false</c>.</returns>
         public static bool IsEpsilonEqualsZero(Vector3 a)
-            => MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
+            => GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
 
         /// <summary>
         /// Returns a new Vector3 with each component (x, y, z) set to the
@@ -217,9 +217,9 @@ namespace GUtilsUnity.Extensions
         /// corresponding component of the numerator by the denominator.</returns>
         public static Vector3 Divide(this Vector3 numerator, Vector3 denominator)
             => new(
-                MathExtensions.Divide(numerator.x, denominator.x),
-                MathExtensions.Divide(numerator.y, denominator.y),
-                MathExtensions.Divide(numerator.z, denominator.z)
+                GUtils.Extensions.MathExtensions.Divide(numerator.x, denominator.x),
+                GUtils.Extensions.MathExtensions.Divide(numerator.y, denominator.y),
+                GUtils.Extensions.MathExtensions.Divide(numerator.z, denominator.z)
             );
 
         /// <summary>

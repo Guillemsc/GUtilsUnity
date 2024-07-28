@@ -1,5 +1,5 @@
 using System;
-using GUtilsUnity.Json.Extensions;
+using GUtils.Json.Extensions;
 using Newtonsoft.Json;
 using UnityEngine;
 

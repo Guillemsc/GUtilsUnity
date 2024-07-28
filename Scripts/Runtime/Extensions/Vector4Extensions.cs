@@ -33,7 +33,7 @@ namespace GUtilsUnity.Extensions
         /// <returns><see langword="true"/> if the two <see cref="Vector4"/> objects are
         /// approximately equal; otherwise, <see langword="false"/>.</returns>
         public static bool AreEpsilonEquals(Vector4 a, Vector4 b)
-            => MathExtensions.IsEpsilonEqualsZero((a - b).sqrMagnitude);
+            => GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero((a - b).sqrMagnitude);
 
         /// <summary>
         /// Determines whether a <see cref="Vector4"/> object is approximately zero within a small
@@ -43,7 +43,7 @@ namespace GUtilsUnity.Extensions
         /// <returns><see langword="true"/> if the <see cref="Vector4"/> object is approximately zero;
         /// otherwise, <see langword="false"/>.</returns>
         public static bool IsEpsilonEqualsZero(Vector4 a)
-            => MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
+            => GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero(a.sqrMagnitude);
 
         /// <summary>
         /// Returns a new <see cref="Vector4"/> object with the absolute values of each component (x, y, z, w)

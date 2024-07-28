@@ -1,8 +1,8 @@
+using GUtils.Services.Locators;
 using GUtilsUnity.Attributes.FindFirstAsset;
 using GUtilsUnity.Audio.Services;
 using GUtilsUnity.Features.ExtendableButtons.Configurations;
 using GUtilsUnity.Features.ExtendableButtons.Enums;
-using GUtilsUnity.Services.Locators;
 
 namespace GUtilsUnity.Features.ExtendableButtons.ButtonExtensions
 {

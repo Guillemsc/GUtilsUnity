@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using GUtilsUnity.Extensions;
+﻿using System.Collections.Generic;
+using GUtils.Extensions;
 using GUtilsUnity.Layout.Manual.Extensions;
 using UnityEngine;
 

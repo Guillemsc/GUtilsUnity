@@ -1,4 +1,4 @@
-using GUtilsUnity.Di.Builder;
+using GUtils.Di.Builder;
 
 namespace GUtilsUnity.SrDebugger.Extensions
 {

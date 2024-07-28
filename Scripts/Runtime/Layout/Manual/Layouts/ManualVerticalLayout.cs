@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using GUtils.Extensions;
 using GUtilsUnity.Refreshing.Refreshables;
-using GUtilsUnity.Extensions;
 using GUtilsUnity.Layout.Manual.Extensions;
 using UnityEngine;
 

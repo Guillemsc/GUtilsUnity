@@ -1,13 +1,13 @@
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.DiscriminatedUnions;
-using GUtilsUnity.Optionals;
-using GUtilsUnity.Persistence.StorageMethods;
-using GUtilsUnity.Types;
+using GUtils.DiscriminatedUnions;
+using GUtils.Optionals;
+using GUtils.Persistence.StorageMethods;
+using GUtils.Types;
 
 namespace GUtilsUnity.Persistence.Tests.Methods
 {
-    public sealed class TestJsonLiteralStorageMethod : IStorageMethod
+    public sealed class TestJsonLiteralStorageMethod : IPersistenceStorageMethod
     {
         readonly string _jsonString;
 

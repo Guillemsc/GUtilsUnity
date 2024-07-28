@@ -1,4 +1,5 @@
-using GUtilsUnity.Types;
+using GUtils.DiscriminatedUnions;
+using GUtils.Types;
 using NUnit.Framework;
 
 namespace GUtilsUnity.DiscriminatedUnions.Tests

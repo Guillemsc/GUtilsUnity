@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using GUtilsUnity.Enums.Utils;
-using GUtilsUnity.Optionals;
+using GUtils.Enums.Utils;
+using GUtils.Extensions;
+using GUtils.Optionals;
 using GUtilsUnity.Randomization.Generators;
-using GUtilsUnity.Extensions;
 using UnityEngine;
 
 namespace GUtilsUnity.Randomization.Extensions

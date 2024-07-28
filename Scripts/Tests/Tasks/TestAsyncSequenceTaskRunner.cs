@@ -1,5 +1,6 @@
-using GUtilsUnity.Tasks.CompletionSources;
-using GUtilsUnity.Tasks.Runners;
+using GUtils.Extensions;
+using GUtils.Tasks.CompletionSources;
+using GUtils.Tasks.Runners;
 using NUnit.Framework;
 using GUtilsUnity.Extensions;
 

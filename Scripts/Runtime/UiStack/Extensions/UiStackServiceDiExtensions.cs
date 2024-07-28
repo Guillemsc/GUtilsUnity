@@ -1,9 +1,9 @@
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Delegates;
+using GUtils.Di.Builder;
+using GUtils.Di.Delegates;
+using GUtils.Visibility.Visibles;
 using GUtilsUnity.UiFrame.Layers;
 using GUtilsUnity.UiStack.Entries;
 using GUtilsUnity.UiStack.Services;
-using GUtilsUnity.Visibility.Visibles;
 using UnityEngine;
 
 namespace GUtilsUnity.UiStack.Extensions

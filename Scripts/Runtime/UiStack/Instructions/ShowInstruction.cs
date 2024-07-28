@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.Sequencing.Instructions;
+using GUtils.Tasks.Sequencing.Instructions;
 using GUtilsUnity.UiStack.UseCases;
 
 namespace GUtilsUnity.UiStack.Instructions

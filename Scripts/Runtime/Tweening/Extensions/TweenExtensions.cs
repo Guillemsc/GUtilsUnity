@@ -2,6 +2,8 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using DG.Tweening;
+using GUtils.Extensions;
+using GUtils.Time.Timers;
 using GUtilsUnity.Time.Timers;
 using GUtilsUnity.TweenPlayers.Looping;
 

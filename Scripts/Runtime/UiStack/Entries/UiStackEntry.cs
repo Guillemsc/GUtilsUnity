@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GUtilsUnity.Visibility.Visibles;
+using GUtils.Visibility.Visibles;
 using UnityEngine;
 
 namespace GUtilsUnity.UiStack.Entries

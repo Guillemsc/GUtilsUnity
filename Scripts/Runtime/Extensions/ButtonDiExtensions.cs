@@ -1,22 +1,12 @@
 using System;
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Container;
+using GUtils.Di.Builder;
+using GUtils.Di.Container;
 using UnityEngine.UI;
 
 namespace GUtilsUnity.Extensions
 {
     public static class ButtonDiExtensions
     {
-        [System.Obsolete("This method is obsolete. Use LinkButtonClick instead.")]
-        public static IDiContainerBuilder LinkButton(
-            this IDiContainerBuilder builder,
-            Button button,
-            Action action
-        )
-        {
-            return builder.LinkButtonClick(button, action);
-        }
-
         public static IDiContainerBuilder LinkButtonClick(
             this IDiContainerBuilder builder,
             Button button,

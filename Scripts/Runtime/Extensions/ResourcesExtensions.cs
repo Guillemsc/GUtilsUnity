@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using GUtilsUnity.Optionals;
+using GUtils.Optionals;
 using UnityEngine;
 
 namespace GUtilsUnity.Extensions

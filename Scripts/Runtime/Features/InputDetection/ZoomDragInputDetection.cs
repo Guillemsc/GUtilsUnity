@@ -37,7 +37,7 @@ namespace GUtilsUnity.InputDetection
             var distanceDelta = distance - _previousDistance;
             var dragCenterDelta = dragCenter - _previousDragCenter;
 
-            if (MathExtensions.IsEpsilonEqualsZero(distanceDelta))
+            if (GUtils.Extensions.MathExtensions.IsEpsilonEqualsZero(distanceDelta))
             {
                 OnZoom?.Invoke(distanceDelta);
             }

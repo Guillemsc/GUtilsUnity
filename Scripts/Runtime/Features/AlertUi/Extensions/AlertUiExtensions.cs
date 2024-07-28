@@ -1,9 +1,9 @@
 using System;
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Container;
+using GUtils.Di.Builder;
+using GUtils.Di.Container;
+using GUtils.Notifying.Notifications;
+using GUtils.Predicates;
 using GUtilsUnity.Features.AlertUi.Interactor;
-using GUtilsUnity.Notifying.Notifications;
-using GUtilsUnity.Predicates;
 
 namespace GUtilsUnity.Features.AlertUi.Extensions
 {

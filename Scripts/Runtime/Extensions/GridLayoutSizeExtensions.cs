@@ -27,7 +27,7 @@ namespace GUtilsUnity.Extensions
 
             float remainingSize = parentWidth - spacingSize;
 
-            float cellWidth = MathExtensions.Divide(remainingSize, gridLayoutConstraintCount);
+            float cellWidth = GUtils.Extensions.MathExtensions.Divide(remainingSize, gridLayoutConstraintCount);
 
             return cellWidth;
         }

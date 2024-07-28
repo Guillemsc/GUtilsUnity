@@ -1,5 +1,5 @@
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Installers;
+using GUtils.Di.Builder;
+using GUtils.Di.Installers;
 using GUtilsUnity.Features.InputUi.Data;
 using GUtilsUnity.Features.InputUi.Enums;
 using GUtilsUnity.Features.InputUi.Interactors;

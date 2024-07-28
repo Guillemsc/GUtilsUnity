@@ -15,7 +15,7 @@ namespace GUtilsUnity.Extensions.Tests
         [TestCase(-4, -5, -1,  ExpectedResult = 0.25f)]
         public float GetNormalizedFactor_Returns_CorrectValue(float current, float min, float max)
         {
-            return MathExtensions.GetNormalizedFactor(current, min, max);
+            return GUtils.Extensions.MathExtensions.GetNormalizedFactor(current, min, max);
         }
     }
 }

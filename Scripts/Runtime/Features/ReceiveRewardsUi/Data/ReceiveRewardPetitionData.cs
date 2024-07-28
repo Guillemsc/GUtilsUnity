@@ -1,5 +1,4 @@
 using System;
-using GUtilsUnity.Events;
 using UnityEngine;
 
 namespace GUtilsUnity.Features.ReceiveRewardsUi.Data

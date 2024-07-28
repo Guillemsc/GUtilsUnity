@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GUtils.Extensions;
 using GUtilsUnity.SafeArea.Data;
 using GUtilsUnity.Extensions;
 using UnityEngine;

@@ -1,18 +1,12 @@
 using System;
+using GUtils.Directions;
 using GUtilsUnity.Data;
-using GUtilsUnity.Directions;
 using UnityEngine;
 
 namespace GUtilsUnity.Extensions
 {
     public static class RectExtensions
     {
-        [Obsolete("Use OriginMaxSize instead")]
-        public static Rect PositiveInfinity => OriginMinSize;
-
-        [Obsolete("Use OriginMinSize instead")]
-        public static Rect NegativeInfinity => OriginMinSize;
-
         /// <summary>
         /// <see cref="Rect"/> with center <see cref="Vector2.zero"/> and size <see cref="Vector2Extensions.MaxValue"/>.
         /// </summary>

@@ -1,4 +1,4 @@
-using GUtilsUnity.Types;
+using GUtils.Types;
 using UnityEngine;
 
 namespace GUtilsUnity.Features.StartEndPositionParticleSystems

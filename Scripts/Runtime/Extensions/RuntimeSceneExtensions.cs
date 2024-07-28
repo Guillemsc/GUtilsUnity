@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using GUtilsUnity.DiscriminatedUnions;
-using GUtilsUnity.Logging.Loggers;
-using GUtilsUnity.Optionals;
+using GUtils.DiscriminatedUnions;
+using GUtils.Optionals;
+using GUtils.Types;
 using GUtilsUnity.SceneManagement.Collections;
 using GUtilsUnity.SceneManagement.Reference;
-using GUtilsUnity.Types;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using LogType = GUtilsUnity.Logging.Enums.LogType;
 
-namespace GUtilsUnity.SceneManagement.Loader
+namespace GUtilsUnity.Extensions
 {
     /// <summary>
     /// Scene management at run-time.
     /// </summary>
-    public static class RuntimeSceneLoader
+    public static class RuntimeSceneExtensions
     {
         /// <summary>
         /// Checks if a scene exists based on the given scene reference.
@@ -128,14 +126,11 @@ namespace GUtilsUnity.SceneManagement.Loader
 
             if (hasError)
             {
-                DebugOnlyUnityLogger.Instance.Log(
-                    Logging.Enums.LogType.Error,
-                    errorMessage.Message
-                );
+                UnityEngine.Debug.LogError(errorMessage.Message);
                 return Optional<Scene>.None;
             }
 
-            return result.GetFirstUnsafe();
+            return result.UnsafeGetFirst();
         }
 
         /// <summary>
@@ -175,7 +170,7 @@ namespace GUtilsUnity.SceneManagement.Loader
                 if (!loadedScene.IsValid())
                 {
                     taskCompletionSource.SetResult(
-                        new ErrorMessage($"There was an error loading scene: {sceneName}. Loaded scene is not valid at {nameof(RuntimeSceneLoader)}")
+                        new ErrorMessage($"There was an error loading scene: {sceneName}. Loaded scene is not valid at {nameof(RuntimeSceneExtensions)}")
                     );
                     return;
                 }

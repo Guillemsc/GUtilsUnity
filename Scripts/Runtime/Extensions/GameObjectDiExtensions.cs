@@ -1,6 +1,6 @@
 using System;
-using GUtilsUnity.Di.Builder;
-using GUtilsUnity.Di.Container;
+using GUtils.Di.Builder;
+using GUtils.Di.Container;
 using UnityEngine;
 
 namespace GUtilsUnity.Extensions

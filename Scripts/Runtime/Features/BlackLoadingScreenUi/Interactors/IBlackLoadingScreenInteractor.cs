@@ -1,5 +1,5 @@
+using GUtils.Visibility.Visibles;
 using GUtilsUnity.UiStack.Entries;
-using GUtilsUnity.Visibility.Visibles;
 
 namespace GUtilsUnity.Features.BlackLoadingScreenUi.Interactors
 {

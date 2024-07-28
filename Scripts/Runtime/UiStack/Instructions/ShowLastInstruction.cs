@@ -2,9 +2,8 @@
 using System.Threading;
 using System.Threading.Tasks;
 using GUtils.Extensions;
-using GUtilsUnity.Sequencing.Instructions;
+using GUtils.Tasks.Sequencing.Instructions;
 using GUtilsUnity.UiStack.UseCases;
-using GUtilsUnity.Extensions;
 
 namespace GUtilsUnity.UiStack.Instructions
 {

@@ -1,3 +1,4 @@
+using GUtils.Extensions;
 using NUnit.Framework;
 
 namespace GUtilsUnity.Extensions.Test
@@ -12,7 +13,7 @@ namespace GUtilsUnity.Extensions.Test
         public void GetDecimals_OnValues_ReturnsExpected(double value, double expected)
         {
             var result = value.GetDecimals();
-            var equal = MathExtensions.AreEpsilonEquals(result, expected);
+            var equal = GUtils.Extensions.MathExtensions.AreEpsilonEquals(result, expected);
             Assert.That(equal);
         }
     }

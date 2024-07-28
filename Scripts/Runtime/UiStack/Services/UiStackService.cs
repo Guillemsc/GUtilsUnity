@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using GUtils.Extensions;
+using GUtils.Tasks.Sequencing.Sequencer;
 using GUtilsUnity.Repositories;
-using GUtilsUnity.Sequencing.Sequencer;
 using GUtilsUnity.UiFrame.Layers;
 using GUtilsUnity.UiFrame.Services;
 using GUtilsUnity.UiStack.Builder;
@@ -20,7 +20,7 @@ namespace GUtilsUnity.UiStack.Services
         readonly ISingleRepository<object> _currentUiRepository = new SingleRepository<object>();
         readonly IListRepository<object> _currentPopupsRepository = new ListRepository<object>();
         readonly List<object> _viewStack = new();
-        readonly ISequencer _sequencer = new Sequencer();
+        readonly ITaskSequencer _sequencer = new TaskSequencer();
 
         readonly IUiFrameService _uiFrameService;
 

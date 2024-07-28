@@ -1,4 +1,4 @@
-using GUtilsUnity.Events;
+using GUtils.Events;
 using GUtilsUnity.Pointer.Callbacks;
 
 namespace GUtilsUnity.Features.InputUi.Data

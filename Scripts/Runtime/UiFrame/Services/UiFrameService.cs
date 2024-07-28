@@ -1,21 +1,15 @@
 using System;
 using System.Collections.Generic;
-using GUtilsUnity.ActiveSource;
-using GUtilsUnity.Logging.Loggers;
+using GUtils.ActiveSources;
 using GUtilsUnity.UiFrame.Layers;
-using GUtilsUnity.UiFrame.Views;
 using GUtilsUnity.Extensions;
 using UnityEngine;
-using LogType = GUtilsUnity.Logging.Enums.LogType;
-using Object = System.Object;
 
 namespace GUtilsUnity.UiFrame.Services
 {
     /// <inheritdoc cref="IUiFrameService" />
     public sealed class UiFrameService : MonoBehaviour, IUiFrameService
     {
-        public UiFrameView UiFrameViewPrefab;
-
         readonly Dictionary<UiFrameLayer, Transform> _layers = new();
         readonly Dictionary<Transform, Transform> _originalParents = new();
 
@@ -32,25 +26,7 @@ namespace GUtilsUnity.UiFrame.Services
             {
                 return;
             }
-
-#if POPCORE_CORE_UIFRAMESERVICE_GAMEKIT_INTEROP
-            var defaultLayerGameObject = GameObject.Find("Safe Game Canvas/Safe Area/Content/DefaultLayer");
-            if (defaultLayerGameObject == null)
-            {
-                defaultLayerGameObject = CreateLayerGameObject(gameObject.transform, UiFrameLayer.Default);
-            }
-            _layers.Add(UiFrameLayer.Default, defaultLayerGameObject.transform);
-
-            var popupLayerGameObject = GameObject.Find("Safe Game Canvas/Safe Area/Content/PopupLayer");
-            if (popupLayerGameObject == null)
-            {
-                popupLayerGameObject = CreateLayerGameObject(defaultLayerGameObject.transform.parent, UiFrameLayer.Popup);
-            }
-            _layers.Add(UiFrameLayer.Popup, popupLayerGameObject.transform);
-
-            GameObject loadingLayer = CreateLayerGameObject(popupLayerGameObject.transform.parent, UiFrameLayer.LoadingScreen);
-            _layers.Add(UiFrameLayer.LoadingScreen, loadingLayer.transform);
-#else
+            
             foreach (UiFrameLayer layer in UiFrameLayerInfo.Values)
             {
                 string layerName = layer.ToString();
@@ -63,7 +39,6 @@ namespace GUtilsUnity.UiFrame.Services
 
                 _layers.Add(layer, newLayer.transform);
             }
-#endif
         }
 
         public GameObject CreateLayerGameObject(Transform parent, UiFrameLayer layer)
@@ -88,25 +63,16 @@ namespace GUtilsUnity.UiFrame.Services
 
             if (!layerFound)
             {
-                DebugOnlyUnityLogger.Instance.Log(
-                    Logging.Enums.LogType.Error,
-                    "Could not register {0} at UiFrameService. Layer {1} could not be found.",
-                    targetTransform.name,
-                    layer
+                UnityEngine.Debug.LogError(
+                    $"Could not register {targetTransform.name} at UiFrameService. Layer {layer} could not be found."
                 );
                 return;
             }
 
             _originalParents.Add(targetTransform, targetTransform.parent);
-
-#if POPCORE_CORE_UIFRAMESERVICE_GAMEKIT_INTEROP
-            var frame = GameObject.Instantiate(UiFrameViewPrefab, layerParent, worldPositionStays: false);
-            targetTransform.SetParent(frame.Pivot, worldPositionStays: false);
-            frame.transform.SetAsFirstSibling();
-#else
+            
             targetTransform.SetParent(layerParent, worldPositionStays: false);
             targetTransform.SetAsFirstSibling();
-#endif
         }
 
         public void Unregister(Transform targetTransform)
@@ -120,10 +86,8 @@ namespace GUtilsUnity.UiFrame.Services
 
             if (originalParent == null)
             {
-                DebugOnlyUnityLogger.Instance.Log(
-                    Logging.Enums.LogType.Error,
-                    "Original parent from {0} was null, while trying to unregister from UiFrameService.",
-                    targetTransform.name
+                UnityEngine.Debug.LogError(
+                    $"Original parent from {targetTransform.name} was null, while trying to unregister from UiFrameService."
                 );
                 return;
             }

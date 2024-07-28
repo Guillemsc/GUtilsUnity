@@ -1,5 +1,6 @@
-using GUtilsUnity.Tick.Enums;
-using GUtilsUnity.Tick.Tickables;
+using GUtils.Tick.Enums;
+using GUtils.Tick.Services;
+using GUtils.Tick.Tickables;
 using UnityEngine;
 
 namespace GUtilsUnity.Tick.Services

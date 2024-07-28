@@ -1,17 +1,18 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using GUtilsUnity.Disposing.Disposables;
-using GUtilsUnity.Optionals;
-using GUtilsUnity.SceneManagement.Loader;
+using GUtils.Di.Installers;
+using GUtils.Disposing.Disposables;
+using GUtils.Loadables;
+using GUtils.Optionals;
 using GUtilsUnity.Extensions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace GUtilsUnity.Loadables
 {
-    public sealed class SceneInstallerAsyncLoadable<T> : IAsyncLoadable<T>
-        where T : MonoBehaviour
+    public sealed class SceneInstallerAsyncLoadable<T> : IAsyncLoadable<IInstaller>
+        where T : MonoBehaviour, IInstaller
     {
         readonly string _sceneName;
         readonly bool _setAsActiveScene;
@@ -22,9 +23,9 @@ namespace GUtilsUnity.Loadables
             _setAsActiveScene = setAsActiveScene;
         }
 
-        public async Task<IAsyncDisposable<T>> Load(CancellationToken ct)
+        public async Task<IAsyncDisposable<IInstaller>> Load(CancellationToken ct)
         {
-            Optional<Scene> sceneLoadResult = await RuntimeSceneLoader.LoadFromName(
+            Optional<Scene> sceneLoadResult = await RuntimeSceneExtensions.LoadFromName(
                 _sceneName,
                 LoadSceneMode.Additive,
                 _setAsActiveScene
@@ -48,7 +49,7 @@ namespace GUtilsUnity.Loadables
                 instance,
                 async o =>
                 {
-                    await RuntimeSceneLoader.UnloadFromName(_sceneName);
+                    await RuntimeSceneExtensions.UnloadFromName(_sceneName);
                 });
         }
     }

@@ -1,13 +1,10 @@
 ﻿using UnityEditor;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using GUtilsUnity.Attributes.SelectImplementation;
 using GUtilsUnity.Attributes.SelectImplementation.Data;
-using GUtilsUnity.Extensions;
-using CollectionExtensions = GUtilsUnity.Extensions.CollectionExtensions;
 
 namespace GUtilsUnity.ImplementationSelector.Logic
 {
@@ -24,14 +21,14 @@ namespace GUtilsUnity.ImplementationSelector.Logic
                 return;
             }
 
-            bool isCollection = GUtilsUnity.Extensions.CollectionExtensions.TryGetCollectionArgumentType(fieldInfo.FieldType, out Type baseType);
+            bool isCollection = false; //CollectionExtensions.TryGetCollectionArgumentType(fieldInfo.FieldType, out Type baseType);
 
-            if (!isCollection)
-            {
-                baseType = fieldInfo.FieldType;
-            }
-
-            editorData.BaseType = baseType;
+            // if (!isCollection)
+            // {
+            //     baseType = fieldInfo.FieldType;
+            // }
+            //
+            // editorData.BaseType = baseType;
 
             List<Type> filteredTypes = new();
 

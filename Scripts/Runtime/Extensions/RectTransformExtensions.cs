@@ -1,6 +1,6 @@
 using System;
+using GUtils.Directions;
 using GUtilsUnity.Attributes;
-using GUtilsUnity.Directions;
 using GUtilsUnity.Ui;
 using UnityEngine;
 
