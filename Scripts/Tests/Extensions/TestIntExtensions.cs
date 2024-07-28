@@ -1,3 +1,4 @@
+using GUtils.Extensions;
 using NUnit.Framework;
 
 namespace GUtilsUnity.Extensions.Tests
@@ -31,7 +32,7 @@ namespace GUtilsUnity.Extensions.Tests
         [TestCase(3, 1, 4, ExpectedResult = 1)]
         public int IncrementAndCycle_GeneratesExpectedResults(int value, int start, int end)
         {
-            return IntExtensions.IncrementAndCycle(value, start, end);
+            return value.IncrementAndCycle(start, end);
         }
 
         [Test]
@@ -41,7 +42,7 @@ namespace GUtilsUnity.Extensions.Tests
         [TestCase(1, 1, 4, ExpectedResult = 3)]
         public int DecrementAndCycle_GeneratesExpectedResults(int value, int start, int end)
         {
-            return IntExtensions.DecrementAndCycle(value, start, end);
+            return value.DecrementAndCycle(start, end);
         }
 
         [Test]

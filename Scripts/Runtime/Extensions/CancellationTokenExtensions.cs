@@ -10,7 +10,7 @@ namespace GUtilsUnity.Extensions
         /// </summary>
         public static Task AwaitCancellationRequested(this CancellationToken cancellationToken)
         {
-            return TaskExtensions.AwaitUntil(() => cancellationToken.IsCancellationRequested);
+            return GUtils.Extensions.TaskExtensions.AwaitUntil(() => cancellationToken.IsCancellationRequested);
         }
     }
 }

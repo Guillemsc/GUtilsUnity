@@ -1,4 +1,5 @@
 using System.Globalization;
+using GUtils.Extensions;
 using GUtilsUnity.Analytics.Parameters;
 using GUtilsUnity.Analytics.Visitors;
 using GUtilsUnity.Types;

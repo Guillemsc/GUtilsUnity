@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using GUtilsUnity.Extensions;
 using UnityEditor;
+using GUtils.Extensions;
 
 namespace GUtilsUnity.Work
 {
@@ -59,7 +60,7 @@ namespace GUtilsUnity.Work
 
             Working = true;
 
-            float progressPerUnit = MathExtensions.Divide(1f, _workUnits.Count);
+            float progressPerUnit = GUtils.Extensions.MathExtensions.Divide(1f, _workUnits.Count);
 
             for (int i = 0; i < _workUnits.Count; ++i)
             {

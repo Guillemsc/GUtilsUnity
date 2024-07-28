@@ -7,7 +7,7 @@ using GUtilsUnity.Types;
 using UnityEngine;
 using UnityEngine.Pool;
 using Random = UnityEngine.Random;
-using TaskExtensions = GUtilsUnity.Extensions.TaskExtensions;
+using TaskExtensions = GUtils.Extensions.TaskExtensions;
 
 namespace GUtilsUnity.Features.StartEndPositionParticleSystems
 {

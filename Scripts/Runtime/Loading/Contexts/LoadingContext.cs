@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using GUtils.Extensions;
 using GUtilsUnity.Delegates.Animation;
 using GUtilsUnity.Sequencing.Instructions;
 using GUtilsUnity.Sequencing.Sequencer;
-using GUtilsUnity.Extensions;
 
 namespace GUtilsUnity.Loading.Contexts
 {

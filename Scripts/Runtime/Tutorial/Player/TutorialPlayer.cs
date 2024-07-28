@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using GUtilsUnity.Delegates.Animation;
 using GUtilsUnity.Tutorial.Events;
 using GUtilsUnity.Tutorial.Steps;
-using TaskExtensions = GUtilsUnity.Extensions.TaskExtensions;
+using TaskExtensions = GUtils.Extensions.TaskExtensions;
 
 namespace GUtilsUnity.Tutorial.Player
 {
@@ -96,7 +96,7 @@ namespace GUtilsUnity.Tutorial.Player
                     break;
                 }
 
-                await Extensions.TaskExtensions.AwaitUntil(() => _currentTutorialStep == null || _currentTutorialStep.Completed, _currentTaskCancellationTokenSource.Token);
+                await TaskExtensions.AwaitUntil(() => _currentTutorialStep == null || _currentTutorialStep.Completed, _currentTaskCancellationTokenSource.Token);
 
                 if (_stopped)
                 {

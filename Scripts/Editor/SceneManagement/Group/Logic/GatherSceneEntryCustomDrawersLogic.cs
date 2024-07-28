@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using GUtilsUnity.Extensions;
+using GUtils.Extensions;
 using GUtilsUnity.SceneManagement.Group.CustomDrawers;
 using GUtilsUnity.SceneManagement.Group.Data;
 

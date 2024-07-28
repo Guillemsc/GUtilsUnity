@@ -18,6 +18,7 @@ using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using GUtils.Extensions;
 
 namespace GUtilsUnity.AssetValidation.Windows
 {

@@ -32,11 +32,11 @@ namespace GUtilsUnity.Extensions
 
             animator.Play(stateNameHash, layer);
 
-            await TaskExtensions.AwaitUntil(IsCurrentAnimationState, cancellationToken);
+            await GUtils.Extensions.TaskExtensions.AwaitUntil(IsCurrentAnimationState, cancellationToken);
 
             if(cancellationToken.IsCancellationRequested) return;
 
-            await TaskExtensions.AwaitUntil(IsNotCurrentAnimationState, cancellationToken);
+            await GUtils.Extensions.TaskExtensions.AwaitUntil(IsNotCurrentAnimationState, cancellationToken);
         }
     }
 }

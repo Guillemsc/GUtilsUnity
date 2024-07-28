@@ -34,7 +34,7 @@ namespace GUtilsUnity.Extensions
         /// </summary>
         public static Task AwaitUntilNotPlaying(this ParticleSystem particleSystem, CancellationToken cancellationToken)
         {
-            return TaskExtensions.AwaitUntil(() => !particleSystem.isPlaying, cancellationToken);
+            return GUtils.Extensions.TaskExtensions.AwaitUntil(() => !particleSystem.isPlaying, cancellationToken);
         }
     }
 }

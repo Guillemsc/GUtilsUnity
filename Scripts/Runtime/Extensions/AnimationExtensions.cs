@@ -19,7 +19,7 @@ namespace GUtilsUnity.Extensions
                 return false;
             }
 
-            await TaskExtensions.AwaitUntil(() => !animation.isPlaying, cancellationToken);
+            await GUtils.Extensions.TaskExtensions.AwaitUntil(() => !animation.isPlaying, cancellationToken);
 
             if (cancellationToken.IsCancellationRequested)
             {

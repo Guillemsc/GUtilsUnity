@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using GUtils.Extensions;
 using GUtilsUnity.Extensions;
 using UnityEditor;
 using UnityEngine;

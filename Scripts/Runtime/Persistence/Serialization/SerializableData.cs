@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using GUtils.Extensions;
 using GUtilsUnity.DiscriminatedUnions;
 using GUtilsUnity.Logging.Enums;
 using GUtilsUnity.Logging.Loggers;
@@ -12,7 +13,6 @@ using GUtilsUnity.Persistence.Migrations;
 using GUtilsUnity.Persistence.StorageMethods;
 using GUtilsUnity.Types;
 using Newtonsoft.Json;
-using GUtilsUnity.Extensions;
 
 namespace GUtilsUnity.Persistence.Serialization
 {

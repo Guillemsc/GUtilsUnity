@@ -1,4 +1,4 @@
-using GUtilsUnity.Loading.Loadables;
+using GUtils.Loading.Loadables;
 using GUtilsUnity.Persistence.Services;
 using GUtilsUnity.Saving.Saveables;
 

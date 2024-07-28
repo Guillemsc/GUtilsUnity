@@ -7,6 +7,7 @@ using GUtilsUnity.Tutorial.Steps;
 using NUnit.Framework;
 using GUtilsUnity.Extensions;
 using UnityEngine.TestTools;
+using GUtils.Extensions;
 
 namespace GUtilsUnity.Tutorial
 {

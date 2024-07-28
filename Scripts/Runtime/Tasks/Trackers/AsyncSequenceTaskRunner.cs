@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using GUtils.Extensions;
 using GUtilsUnity.Events;
 using GUtilsUnity.Tasks.CompletionSources;
 using GUtilsUnity.Events.Extensions;
