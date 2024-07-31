@@ -1,10 +1,17 @@
-using System;
 using UnityEngine;
 
 namespace GUtilsUnity.Extensions
 {
     public static class MathExtensions
     {
+        /// <summary>
+        /// Calculates the angle in degrees given a direction vector.
+        /// </summary>
+        public static float GetAngleFromDirection(Vector2 direction)
+        {
+            return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        }
+        
         /// <summary>
         /// Calculates the direction vector given an angle in degrees.
         /// </summary>

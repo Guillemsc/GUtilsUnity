@@ -396,15 +396,12 @@ namespace GUtilsUnity.Extensions
         /// A new Vector2 where each component is clamped between the corresponding components of the minimum and maximum Vector2.
         /// </returns>
         public static Vector2 Clamp(Vector2 value, Vector2 minValue, Vector2 maxValue)
-            => Vector2.Min(Vector2.Max(minValue, value), maxValue);
-
-        [System.Obsolete("This method is obsolete. Call ScreenExtensions.FromScreenToViewPortPosition instead.")]
-        public static Vector2 FromScreenToViewPortVector2(this Vector2 screenPosition)
-            => new (screenPosition.x / Screen.width, screenPosition.y / Screen.height);
-
-        [System.Obsolete("This method is obsolete. Call ScreenExtensions.FromViewportToScreenPosition instead.")]
-        public static Vector2 FromViewportToScreenVector2(this Vector2 viewportPosition)
-            => new (viewportPosition.x * Screen.width, viewportPosition.y * Screen.height);
+        {
+            value = Vector2.Max(minValue, value);   
+            value = Vector2.Min(maxValue, value);  
+            
+            return value;
+        }
 
         /// <summary>
         /// Given a position, a pivot where this position should be, a delta between objects, a count of objects and

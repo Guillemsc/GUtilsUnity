@@ -6,7 +6,7 @@ using UnityEngine;
 namespace GUtilsUnity.Tick.Services
 {
     /// <inheritdoc cref="ITickablesService" />
-    public sealed class TickablesService : MonoBehaviour, ITickablesService
+    public sealed class UnityTickablesService : MonoBehaviour, ITickablesService
     {
         readonly TickablesContainerTickable _preUpdateTickables = new();
         readonly TickablesContainerTickable _updateTickables = new();

@@ -11,8 +11,8 @@ using UnityEngine.SceneManagement;
 
 namespace GUtilsUnity.Loadables
 {
-    public sealed class SceneInstallerAsyncLoadable<T> : IAsyncLoadable<IInstaller>
-        where T : MonoBehaviour, IInstaller
+    public sealed class SceneInstallerAsyncLoadable<T> : IAsyncLoadable<T>
+        where T : MonoBehaviour
     {
         readonly string _sceneName;
         readonly bool _setAsActiveScene;
@@ -23,7 +23,7 @@ namespace GUtilsUnity.Loadables
             _setAsActiveScene = setAsActiveScene;
         }
 
-        public async Task<IAsyncDisposable<IInstaller>> Load(CancellationToken ct)
+        public async Task<IAsyncDisposable<T>> Load(CancellationToken ct)
         {
             Optional<Scene> sceneLoadResult = await RuntimeSceneExtensions.LoadFromName(
                 _sceneName,
