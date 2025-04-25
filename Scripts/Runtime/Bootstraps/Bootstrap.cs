@@ -9,7 +9,7 @@ namespace GUtilsUnity.Runtime.Bootstraps
     {
         void Start()
         {
-            Run(CancellationToken.None).RunAsync();
+            Run(CancellationToken.None).FireAndForget();
         }
 
         protected abstract Task Run(CancellationToken cancellationToken);

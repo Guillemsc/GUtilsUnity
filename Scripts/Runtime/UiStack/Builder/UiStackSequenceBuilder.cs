@@ -206,7 +206,7 @@ namespace GUtilsUnity.UiStack.Builder
 
         public void Execute()
         {
-            Execute(default).RunAsync();
+            Execute(default).FireAndForget();
         }
     }
 }

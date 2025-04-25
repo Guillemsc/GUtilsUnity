@@ -48,7 +48,7 @@ namespace GUtilsUnity.Work
 
         public void Run(string workName)
         {
-            Execute(workName).RunAsync();
+            Execute(workName).FireAndForget();
         }
 
         async Task Execute(string workName)

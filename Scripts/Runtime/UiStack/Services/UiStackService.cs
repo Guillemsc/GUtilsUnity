@@ -61,8 +61,8 @@ namespace GUtilsUnity.UiStack.Services
                 return;
             }
 
-            entry.Visible.SetVisible(visible: true, instantly: true, CancellationToken.None).RunAsync();;
-            entry.Visible.SetVisible(visible: false, instantly: true, CancellationToken.None).RunAsync();;
+            entry.Visible.SetVisible(visible: true, instantly: true, CancellationToken.None).FireAndForget();;
+            entry.Visible.SetVisible(visible: false, instantly: true, CancellationToken.None).FireAndForget();;
 
             _entriesRepository.Add(entry.Id, entry);
 
@@ -75,7 +75,7 @@ namespace GUtilsUnity.UiStack.Services
 
             if (found)
             {
-                entry.Visible.SetVisible(visible: false, instantly: true, CancellationToken.None).RunAsync();
+                entry.Visible.SetVisible(visible: false, instantly: true, CancellationToken.None).FireAndForget();
             }
 
             if (!entry.IsPopup)

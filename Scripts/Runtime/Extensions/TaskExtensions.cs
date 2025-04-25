@@ -18,7 +18,7 @@ namespace GUtilsUnity.Extensions
         /// <returns>An <see cref="IEnumerator"/> that represents the coroutine.</returns>
         public static IEnumerator ToCoroutine(this Task task)
         {
-            task.RunAsync();
+            task.FireAndForget();
 
             yield return new WaitUntil(() => task.IsCompleted);
         }
@@ -32,7 +32,7 @@ namespace GUtilsUnity.Extensions
         /// <returns>An <see cref="IEnumerator"/> that represents the coroutine.</returns>
         public static IEnumerator ToCoroutine(this Task task, Action<Exception> onException)
         {
-            task.RunAsync(onException);
+            task.FireAndForget(onException);
 
             yield return new WaitUntil(() => task.IsCompleted);
         }

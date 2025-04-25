@@ -69,7 +69,7 @@ namespace GUtilsUnity.Tutorial
 
             async Task AddCount(bool instantly, CancellationToken cancellationToken)
             {
-                tutorialPlayer.Stop(false).RunAsync();
+                tutorialPlayer.Stop(false).FireAndForget();
 
                 await StopwatchTimer.Await(0.3f.ToSeconds(), cancellationToken);
 
@@ -103,7 +103,7 @@ namespace GUtilsUnity.Tutorial
                 new AsyncFinishCallbackTutorialStep(false, AddCount)
             );
 
-            tutorialPlayer.Play().RunAsync();
+            tutorialPlayer.Play().FireAndForget();
 
             yield return tutorialPlayer.Stop(true).ToCoroutine();
 

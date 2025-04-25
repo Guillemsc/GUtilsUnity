@@ -283,7 +283,7 @@ namespace GUtilsUnity.AssetValidation.Windows
 
         void RefreshValidation()
         {
-            RefreshValidationAsync(CancellationToken.None).RunAsync();
+            RefreshValidationAsync(CancellationToken.None).FireAndForget();
         }
 
         async Task RefreshValidationAsync(CancellationToken cancellationToken)

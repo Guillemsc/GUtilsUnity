@@ -12,7 +12,7 @@ namespace GUtilsUnity.Extensions
         /// <param name="scene">The scene to search for the component.</param>
         /// <param name="component">The component of type T retrieved from the scene, if found.</param>
         /// <returns>Returns true if the component was found, false otherwise.</returns>
-        public static bool TryGetRootComponent<T>(this Scene scene, out T component)
+        public static bool TryGetRootComponent<T>(this Scene scene, out T? component) where T : Component
         {
             if (!scene.IsValid())
             {
@@ -36,6 +36,35 @@ namespace GUtilsUnity.Extensions
 
             component = default;
             return false;
+        }
+
+        /// <summary>
+        /// Attempts to retrieve the first component of type T from the root objects in the given Scene.
+        /// </summary>
+        /// <typeparam name="T">The type of component to retrieve.</typeparam>
+        /// <param name="scene">The scene to search for the component.</param>
+        public static T? GetRootComponent<T>(this Scene scene) where T : Component
+        {
+            if (!scene.IsValid())
+            {
+                return null;
+            }
+
+            GameObject[] rootGameObjects = scene.GetRootGameObjects();
+
+            foreach (GameObject rootGameObject in rootGameObjects)
+            {
+                bool hasComponent = rootGameObject.TryGetComponent(out T component);
+
+                if (!hasComponent)
+                {
+                    continue;
+                }
+
+                return component;
+            }
+
+            return null;
         }
     }
 }
