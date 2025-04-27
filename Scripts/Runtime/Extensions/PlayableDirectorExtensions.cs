@@ -10,7 +10,7 @@ namespace GUtilsUnity.Extensions
         /// <summary>
         /// <see cref="PlayableDirector.Play(PlayableAsset)"/>s the PlayableDirector, and awaits until it's not playing anymore.
         /// </summary>
-        public static Task Play(this PlayableDirector playableDirector, CancellationToken cancellationToken)
+        public static Task PlayAsync(this PlayableDirector playableDirector, CancellationToken cancellationToken)
         {
             playableDirector.Play();
 
@@ -20,7 +20,7 @@ namespace GUtilsUnity.Extensions
         /// <summary>
         /// <see cref="PlayableDirector.Play(PlayableAsset)"/>s the PlayableDirector with some PlayableAsset, and awaits until it's not playing anymore.
         /// </summary>
-        public static Task Play(this PlayableDirector playableDirector, PlayableAsset playableAsset, CancellationToken cancellationToken)
+        public static Task PlayAsync(this PlayableDirector playableDirector, PlayableAsset playableAsset, CancellationToken cancellationToken)
         {
             playableDirector.Play(playableAsset);
 
@@ -37,7 +37,7 @@ namespace GUtilsUnity.Extensions
                 return Task.CompletedTask;
             }
 
-            TaskCompletionSource<object> taskCompletionSource = new();
+            TaskCompletionSource<object?> taskCompletionSource = new();
             taskCompletionSource.LinkCancellationToken(cancellationToken);
 
             void OnStoped(PlayableDirector _) => taskCompletionSource.TrySetResult(default);

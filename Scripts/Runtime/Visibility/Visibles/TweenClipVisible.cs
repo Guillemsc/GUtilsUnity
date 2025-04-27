@@ -4,7 +4,7 @@ using GUtils.Visibility.Visibles;
 using GUtilsUnity.TweenPlayers.Clips.Base;
 using GUtilsUnity.TweenPlayers.Players;
 
-namespace Popcore.GameKit.Level.FailGoalPopup.UseCases
+namespace GUtilsUnity.Level.FailGoalPopup.UseCases
 {
     public sealed class TweenClipVisible : IVisible
     {

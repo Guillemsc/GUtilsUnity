@@ -8,9 +8,7 @@ namespace GUtilsUnity.Extensions
         /// After applying this extension, it is safe to use them
         /// </summary>
         /// <example>gameObject.Null()?.SetActive(true)</example>
-        public static T Null<T>(
-            this T value)
-            where T : UnityEngine.Object
+        public static T? Null<T>(this T? value) where T : UnityEngine.Object
         {
             if (!value)
             {
