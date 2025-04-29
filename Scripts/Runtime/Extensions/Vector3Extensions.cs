@@ -217,9 +217,9 @@ namespace GUtilsUnity.Extensions
         /// corresponding component of the numerator by the denominator.</returns>
         public static Vector3 Divide(this Vector3 numerator, Vector3 denominator)
             => new(
-                GUtils.Extensions.MathExtensions.Divide(numerator.x, denominator.x),
-                GUtils.Extensions.MathExtensions.Divide(numerator.y, denominator.y),
-                GUtils.Extensions.MathExtensions.Divide(numerator.z, denominator.z)
+                GUtils.Extensions.MathExtensions.SafeDivide(numerator.x, denominator.x),
+                GUtils.Extensions.MathExtensions.SafeDivide(numerator.y, denominator.y),
+                GUtils.Extensions.MathExtensions.SafeDivide(numerator.z, denominator.z)
             );
 
         /// <summary>

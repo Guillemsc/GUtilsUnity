@@ -60,7 +60,7 @@ namespace GUtilsUnity.Work
 
             Working = true;
 
-            float progressPerUnit = GUtils.Extensions.MathExtensions.Divide(1f, _workUnits.Count);
+            float progressPerUnit = GUtils.Extensions.MathExtensions.SafeDivide(1f, _workUnits.Count);
 
             for (int i = 0; i < _workUnits.Count; ++i)
             {
