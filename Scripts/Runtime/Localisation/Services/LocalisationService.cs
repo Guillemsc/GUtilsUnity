@@ -10,7 +10,7 @@ namespace GUtilsUnity.Localisation.Services
 {
     public sealed class LocalisationService
     {
-        public event Action<LocalisationService>? LanguageChangedAction;
+        public event Action? LanguageChangedAction;
         public string CurrentLanguage { get; private set; } = string.Empty;
 
         bool _loadingLanguage;
@@ -71,7 +71,7 @@ namespace GUtilsUnity.Localisation.Services
             
             Debug.Log($"{CurrentLanguage} language loaded");
             
-            LanguageChangedAction?.Invoke(this);
+            LanguageChangedAction?.Invoke();
         }
 
         public string Get(string key)
